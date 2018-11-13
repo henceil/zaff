@@ -1,0 +1,20 @@
+.btn-default {
+	color: #555;
+}
+
+.panel-body{
+	padding: 0px;
+}
+
+table {
+	color: #555;
+}
+
+.panel-body{
+	height: 800px;
+}
+
+.table {
+	max-height: 800px;
+	overflow: auto;
+}

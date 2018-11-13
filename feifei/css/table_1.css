@@ -1,0 +1,40 @@
+.btn-default {
+	color: #555;
+}
+
+.panel-body{
+	padding: 0px;
+}
+
+/*table_1*/
+#excel {
+	max-height: 800px;
+	overflow: auto;
+}
+
+#table1_panel .panel-body{
+	height: 800px;
+}
+
+/*table_1_ex*/
+.row .col-xs-10 .col-xs-4 .panel .panel-body{
+	height: 180px;
+}
+
+.row .col-xs-10 .col-xs-6 .panel .panel-body{
+	height: 230px;
+}
+
+/*table_2*/
+.row .col-xs-8 .panel .panel-body{
+	height: 600px;
+}
+#table2_excel {
+	max-height: 200px;
+	overflow: auto;
+}
+
+
+table {
+	color: #555;
+}

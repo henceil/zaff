@@ -1,0 +1,15 @@
+.btn-default {
+	color: #555;
+}
+
+.panel-body {
+	padding: 0px;
+}
+
+.row .col-xs-10 .col-xs-4 .panel .panel-body{
+	height: 350px;
+}
+
+.row .col-xs-10 .col-xs-6 .panel .panel-body{
+	height: 450px;
+}

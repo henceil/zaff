@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" http-equiv="Access-Control-Allow-Origin" content="*">
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>飞飞统计</title>
+    <script src="lib/js/jquery3.3.js" ></script>
+    <script src="https://cdn.bootcss.com/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="lib/js/xlsx.core.min.js" ></script>
+    <!-- 引入 ECharts 文件 -->
+    <script src="lib/js/echarts.js"></script>
+    <script src="lib/js/vintage.js"></script>
+    <script src="lib/js/dark.js"></script>
+    <script src="lib/js/roma.js"></script>
+    <script src="lib/js/shine.js"></script>
+    <script src="js/iframeClick.js"></script>
+    <link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/index.css">
+</head>
+<body>
+    <script src="header.js"></script>
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xs-2 well">
+                <script src="leftBar.js"></script>
+                <script type="text/javascript">
+                    $("#mainPage").css("background-color","#f0ad4e").css("border-color","#eea236");
+                </script>
+            </div>
+            <div class="col-xs-10 well">
+                <div class="well well-sm">
+                    <a class="btn btn-info">筛选器</a> 
+                </div>
+                <div class="row">
+                    <div class="col-xs-4">
+                        <div class="panel panel-primary">
+                            <div class="panel-heading" id="mainPageHead1">
+                                <h3 class="panel-title">黑榜</h3>
+                            </div>
+                            <div class="panel-body" id="echart_1">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-4">
+                        <div class="panel panel-primary">
+                            <div class="panel-heading">
+                                <h3 class="panel-title">主页二</h3>
+                            </div>
+                            <div class="panel-body" id="echart_2">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-4">
+                        <div class="panel panel-primary">
+                            <div class="panel-heading">
+                                <h3 class="panel-title">主页三</h3>
+                            </div>
+                            <div class="panel-body"  id="echart_3">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-xs-6">
+                        <div class="panel panel-primary">
+                            <div class="panel-heading">
+                                <h3 class="panel-title">需求吞吐量</h3>
+                            </div>
+                            <div class="panel-body"  id="echart_4">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-6 well">
+                
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+<script src="js/echart/PieBase.js"></script>
+<script src="js/echart/BarMultY.js"></script>
+<script src="js/echart/BarCompare.js"></script>
+<!-- 表内数据 -->
+<script src="js/table_1_data.js"></script>
+<script src="js/table_2_data.js"></script>
+<script src="inks/redBlack/js/blackListData.js"></script>
+<script type="text/javascript">
+     $(".container-fluid").css('width',window.screen.width);
+    BarCompare('echart_1',blackListData);
+    PieBase('echart_2');
+    PieBase('echart_3');
+    BarMultY('echart_4',table1_data);
+</script>
+</html>

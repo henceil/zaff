@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" http-equiv="Access-Control-Allow-Origin" content="*">
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>主页</title>
+    <script src="lib/js/jquery3.3.js" ></script>
+    <script src="https://cdn.bootcss.com/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="lib/js/xlsx.core.min.js" ></script>
+    <!-- 引入 ECharts 文件 -->
+    <script src="lib/js/echarts.js"></script>
+    <script src="lib/js/vintage.js"></script>
+    <script src="lib/js/dark.js"></script>
+    <script src="lib/js/roma.js"></script>
+    <script src="lib/js/shine.js"></script>
+    <script src="js/iframeClick.js"></script>
+    <link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/table_1.css">
+</head>
+<body>
+	<script src="header.js"></script>
+
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-xs-2 well">
+				<script src="leftBar.js"></script>
+				<script type="text/javascript">
+					
+				</script>
+			</div>
+			<div class="col-xs-10 well">
+<!-- 				<div class="row well well-sm">
+					<div class="btn-group">
+					  <button type="button" class="btn btn-info dropdown-toggle" data-toggle="dropdown">
+					    筛选器 <span class="caret"></span>
+					  </button>
+					  <ul class="dropdown-menu">
+					    <li><a href="table_1.html">图1</a></li>
+					    <li><a href="#myModal" data-toggle="modal">图2</a></li>
+					    <li><a href="#">图3</a></li>
+					    <li role="separator" class="divider"></li>
+					    <li><a href="#">图4</a></li>
+					    <li><a href="#">图5</a></li>
+					    <li><a href="#">图6</a></li>
+					    <li role="separator" class="divider"></li>
+					    <li><a href="#">图7</a></li>
+					  </ul>
+					</div>
+				</div> -->
+				<div class="row">
+					<div class="col-xs-4">
+						<div class="panel panel-primary">
+		                    <div class="panel-heading">
+		                        <h3 class="panel-title">需求吞吐量</h3>
+		                    </div>
+		                    <div class="panel-body"  id="tuntu_echart_1">
+
+		                    </div>
+		                </div>
+					</div>
+					<div class="col-xs-4">
+						<div class="panel panel-primary">
+		                    <div class="panel-heading">
+		                        <h3 class="panel-title">需求吞吐量</h3>
+		                    </div>
+		                    <div class="panel-body"  id="tuntu_echart_2">
+		                    </div>
+		                </div>
+					</div>
+					<div class="col-xs-4">
+						<div class="panel panel-primary">
+		                    <div class="panel-heading">
+		                        <h3 class="panel-title">需求吞吐量</h3>
+		                    </div>
+		                    <div class="panel-body"  id="tuntu_echart_3">
+		                    </div>
+		                </div>
+					</div>
+				</div>
+
+				<div class="row">
+					<div class="col-xs-6">
+						<div class="panel panel-primary">
+		                    <div class="panel-heading">
+		                        <h3 class="panel-title">需求吞吐量</h3>
+		                    </div>
+		                    <div class="panel-body"  id="tuntu_echart_4">
+		                    </div>
+		                </div>
+					</div>
+					<div class="col-xs-6">
+						<div class="panel panel-primary">
+		                    <div class="panel-heading">
+		                        <h3 class="panel-title">需求吞吐量</h3>
+		                    </div>
+		                    <div class="panel-body"  id="tuntu_echart_5">
+		                    </div>
+		                </div>
+					</div>
+				</div>
+
+				<div class="row">
+					<div class="col-xs-6">
+						<div class="panel panel-primary">
+		                    <div class="panel-heading">
+		                        <h3 class="panel-title">需求吞吐量</h3>
+		                    </div>
+		                    <div class="panel-body"  id="tuntu_echart_6">
+		                    </div>
+		                </div>
+					</div>
+					<div class="col-xs-6">
+						<div class="panel panel-primary">
+		                    <div class="panel-heading">
+		                        <h3 class="panel-title">需求吞吐量</h3>
+		                    </div>
+		                    <div class="panel-body"  id="tuntu_echart_7">
+		                    </div>
+		                </div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+<script src="js/modal.js"></script>
+<script src="js/echart/BarMultY.js"></script>
+<script src="js/echart/PieBase.js"></script>
+<!-- 表内数据 临时！-->
+<script src="js/table_1_data.js"></script>
+<script type="text/javascript">
+	BarMultY('tuntu_echart_1',table1_data);
+	BarMultY('tuntu_echart_2',table1_data);
+	BarMultY('tuntu_echart_3',table1_data);
+	BarMultY('tuntu_echart_4',table1_data);
+	BarMultY('tuntu_echart_5',table1_data);
+	BarMultY('tuntu_echart_6',table1_data);
+	BarMultY('tuntu_echart_7',table1_data);
+
+	$("#tuntu_echart_1").click(function(){
+		showModal(function (id) {
+            BarMultY(id,table1_data);
+        })
+	})
+	$("#tuntu_echart_2").click(function(){
+		showModal(function (id) {
+            BarMultY(id,table1_data);
+        })
+	})
+	$("#tuntu_echart_3").click(function(){
+		showModal(function (id) {
+            BarMultY(id,table1_data);
+        })
+	})
+	$("#tuntu_echart_4").click(function(){
+		showModal(function (id) {
+            BarMultY(id,table1_data);
+        })
+	})
+	$("#tuntu_echart_5").click(function(){
+		showModal(function (id) {
+            BarMultY(id,table1_data);
+        })
+	})
+	$("#tuntu_echart_6").click(function(){
+		showModal(function (id) {
+            BarMultY(id,table1_data);
+        })
+	})
+	$("#tuntu_echart_7").click(function(){
+		showModal(function (id) {
+            PieBase(id,table1_data);
+        })
+	})
+</script>
+</html>
